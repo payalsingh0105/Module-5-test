@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal portfolio website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Website Designer</p>
+                    <h1>Hi, I'm <span>Payal</span><br>Singh from India</h1>
+                </div>
+            </div>
+            </div>
+           <!-------------------about---------------->
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="JF-021-Edit.jpg">
+                        </div>
+                          <div class="about-col-2">
+                            <h1 class="sub-title">About me</h1>
+                            <p>Creating fabulous portraits that are vibrant, lively and spontaneous has been my goal as a website designer 
+                                since I began my career in 2017. I endeavor to capture energy, life, character and emotion in each 
+                                and every website that i created.
+
+                              Authenticity is at the heart of my work. The images I create are not contrived, rather moments of connection 
+                              and spark that have unfolded naturally, really capturing the character and energy of the animal or human in 
+                              front of my lens.</p>
+
+                          <div class="tab-titles">
+                          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                          <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                          <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class=""tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Website designer</span><br>Designing web/App interface</li>
+                            <li><span>Web development</span><br>web App interface</li>
+                            <li><span>App development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class=""tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2019-2021</span><br>ISE in Microsoft department</li>
+                            <li><span>2018-2019</span><br>Job in Cadd centre as Councillor</li>
+                            <li><span>2017-2018</span><br>Internship at ekarrt eCommerce.</li>
+                        </ul>
+                    </div>
+                    <div class=""tab-contents" id="Education">
+                        <ul>
+                            <li><span>2013</span><br>B.tech from MGEC Jaipur</li>
+                            <li><span>2018</span><br>MBA from AIET Jaipur</li>
+                     
+                        </ul>
+                    </div>
+                        
+                          </div>
+                    </div>
+                </div>
+            </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+
+        }
+
+        event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+    </body>
+</html>
